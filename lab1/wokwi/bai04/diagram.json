@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Lab 1 IoT - Embedded Engineer",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 60, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": 60,
+      "left": 180,
+      "attrs": { "temperature": "28", "humidity": "60" }
+    },
+    { "type": "wokwi-led", "id": "alarm_led", "top": 70, "left": -130, "attrs": { "color": "red", "label": "Alarm LED (GPIO 2)" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 130, "left": -120, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "dht:VCC", "esp:3V3", "red", [ "v20", "h-40" ] ],
+    [ "dht:GND", "esp:GND.2", "black", [ "v30", "h-20" ] ],
+    [ "dht:SDA", "esp:23", "blue", [ "v40", "h-10" ] ],
+    [ "esp:2", "r1:1", "red", [ "h-20", "v20" ] ],
+    [ "r1:2", "alarm_led:A", "red", [ "v-20" ] ],
+    [ "alarm_led:C", "esp:GND.1", "black", [ "v20", "h40" ] ]
+  ]
+}
+

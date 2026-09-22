@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Lab 1 IoT - Embedded Engineer",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 60, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": 60,
+      "left": 160,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "lcd:GND", "esp:GND.2", "black", [ "v20", "h-40" ] ],
+    [ "lcd:VCC", "esp:5V", "red", [ "v30", "h-50" ] ],
+    [ "lcd:SDA", "esp:21", "blue", [ "v40", "h-60" ] ],
+    [ "lcd:SCL", "esp:22", "yellow", [ "v50", "h-70" ] ]
+  ]
+}
+

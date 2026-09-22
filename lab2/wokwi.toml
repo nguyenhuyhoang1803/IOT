@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "lab2_iot/.pio/build/bai08/firmware.bin"
+elf = "lab2_iot/.pio/build/bai08/firmware.elf"

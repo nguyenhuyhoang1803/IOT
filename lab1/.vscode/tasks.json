@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Lab 1: Chuyen sang Bai 1 (Den giao thong)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 1",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lab 1: Chuyen sang Bai 2 (Button LED truc tiep)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 2",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lab 1: Chuyen sang Bai 3 (Toggle LED Debounce)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 3",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lab 1: Chuyen sang Bai 4 (Canh bao DHT22 LED)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 4",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lab 1: Chuyen sang Bai 5 (Uptime LCD 16x2)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 5",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lab 1: Chuyen sang Homework 1 (Weather Station)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat h1",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lab 1: Chuyen sang Homework 2 (Stopwatch LCD)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat h2",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lab 1: Chuyen sang Homework 3 (Simple LCD Menu)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat h3",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lab 1: Build All Environments",
+      "type": "shell",
+      "command": "& \"$HOME\\.platformio\\penv\\Scripts\\pio.exe\" run",
+      "problemMatcher": []
+    }
+  ]
+}
+

@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+firmware = "../../.pio/build/homework03/firmware.bin"
+elf = "../../.pio/build/homework03/firmware.elf"
+

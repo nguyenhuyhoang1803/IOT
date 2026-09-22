@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+firmware = "../../.pio/build/bai05/firmware.bin"
+elf = "../../.pio/build/bai05/firmware.elf"
+

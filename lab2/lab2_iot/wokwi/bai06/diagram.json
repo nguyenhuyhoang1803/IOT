@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Lab 2 IoT - Embedded Engineer",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "red_led", "top": 60, "left": 180, "attrs": { "color": "red", "label": "RED (5s)" } },
+    { "type": "wokwi-resistor", "id": "r_red", "top": 120, "left": 170, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "yellow_led", "top": 60, "left": 250, "attrs": { "color": "yellow", "label": "YELLOW (2s)" } },
+    { "type": "wokwi-resistor", "id": "r_yellow", "top": 120, "left": 240, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "green_led", "top": 60, "left": 320, "attrs": { "color": "green", "label": "GREEN (4s)" } },
+    { "type": "wokwi-resistor", "id": "r_green", "top": 120, "left": 310, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:25", "r_red:1", "red", [ "h20", "v20" ] ],
+    [ "r_red:2", "red_led:A", "red", [ "v-20" ] ],
+    [ "red_led:C", "esp:GND.2", "black", [ "v40", "h-80" ] ],
+    [ "esp:26", "r_yellow:1", "gold", [ "h30", "v30" ] ],
+    [ "r_yellow:2", "yellow_led:A", "gold", [ "v-20" ] ],
+    [ "yellow_led:C", "esp:GND.2", "black", [ "v40", "h-150" ] ],
+    [ "esp:27", "r_green:1", "green", [ "h40", "v40" ] ],
+    [ "r_green:2", "green_led:A", "green", [ "v-20" ] ],
+    [ "green_led:C", "esp:GND.2", "black", [ "v40", "h-220" ] ]
+  ]
+}
+

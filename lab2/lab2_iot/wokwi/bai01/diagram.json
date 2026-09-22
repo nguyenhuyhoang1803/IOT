@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Lab 2 IoT - Embedded Engineer",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 60, "left": -120, "attrs": { "color": "red", "label": "LED1 (500ms)" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 120, "left": -110, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led2", "top": 60, "left": 200, "attrs": { "color": "green", "label": "LED2 (1200ms)" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 120, "left": 190, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:2", "r1:1", "orange", [ "h-20", "v30" ] ],
+    [ "r1:2", "led1:A", "orange", [ "v-20" ] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v20", "h40" ] ],
+    [ "esp:4", "r2:1", "green", [ "h20", "v20" ] ],
+    [ "r2:2", "led2:A", "green", [ "v-20" ] ],
+    [ "led2:C", "esp:GND.1", "black", [ "v40", "h-140" ] ]
+  ]
+}
+

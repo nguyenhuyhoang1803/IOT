@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Lab 2 IoT - Embedded Engineer",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 60, "left": -120, "attrs": { "color": "yellow", "label": "LED 1 (300ms)" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 120, "left": -110, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led2", "top": 60, "left": 200, "attrs": { "color": "green", "label": "LED 2 (Button)" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 120, "left": 190, "attrs": { "value": "220" } },
+    { "type": "wokwi-pushbutton", "id": "btn", "top": 180, "left": 200, "attrs": { "color": "blue", "label": "Button (GPIO 18)" } }
+  ],
+  "connections": [
+    [ "esp:2", "r1:1", "gold", [ "h-20", "v30" ] ],
+    [ "r1:2", "led1:A", "gold", [ "v-20" ] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v20", "h40" ] ],
+    [ "esp:4", "r2:1", "green", [ "h20", "v20" ] ],
+    [ "r2:2", "led2:A", "green", [ "v-20" ] ],
+    [ "led2:C", "esp:GND.2", "black", [ "v40", "h-100" ] ],
+    [ "esp:18", "btn:1.l", "blue", [ "h-20", "v120" ] ],
+    [ "btn:2.l", "esp:GND.2", "black", [ "v20", "h-100" ] ]
+  ]
+}
+

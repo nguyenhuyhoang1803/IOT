@@ -1,0 +1,62 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Wokwi: Chon Bai 1 (Hai LED doc lap)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 1",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Wokwi: Chon Bai 2 (Button Debounce)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 2",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Wokwi: Chon Bai 3 (Heartbeat + Serial)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 3",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Wokwi: Chon Bai 4 (DHT11 + Button)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 4",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Wokwi: Chon Bai 5 (3 Tac vu song song)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 5",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Wokwi: Chon Bai 6 (Den giao thong FSM)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 6",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Wokwi: Chon Bai 7 (DHT11 + Buzzer)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 7",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Wokwi: Chon Bai 8 (LEDC PWM 5 muc)",
+      "type": "shell",
+      "command": ".\\switch_bai.bat 8",
+      "problemMatcher": [],
+      "group": "build"
+    }
+  ]
+}
+

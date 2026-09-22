@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "Lab 1 IoT - Embedded Engineer",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 60, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": 60,
+      "left": 160,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": 240,
+      "left": 180,
+      "attrs": { "temperature": "27", "humidity": "68" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn",
+      "top": 180,
+      "left": -130,
+      "attrs": { "color": "purple", "label": "Page Button (GPIO 18)" }
+    }
+  ],
+  "connections": [
+    [ "lcd:GND", "esp:GND.2", "black", [ "v20", "h-40" ] ],
+    [ "lcd:VCC", "esp:5V", "red", [ "v30", "h-50" ] ],
+    [ "lcd:SDA", "esp:21", "blue", [ "v40", "h-60" ] ],
+    [ "lcd:SCL", "esp:22", "yellow", [ "v50", "h-70" ] ],
+    [ "dht:VCC", "esp:3V3", "red", [ "v20", "h-60" ] ],
+    [ "dht:GND", "esp:GND.2", "black", [ "v30", "h-40" ] ],
+    [ "dht:SDA", "esp:23", "purple", [ "v40", "h-20" ] ],
+    [ "esp:18", "btn:1.l", "purple", [ "h-20", "v40" ] ],
+    [ "btn:2.l", "esp:GND.1", "black", [ "v20", "h40" ] ]
+  ]
+}
+

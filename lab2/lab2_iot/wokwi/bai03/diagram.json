@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "Lab 2 IoT - Embedded Engineer",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "hb_led", "top": 60, "left": 200, "attrs": { "color": "blue", "label": "Heartbeat LED (GPIO 2)" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 120, "left": 190, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:2", "r1:1", "blue", [ "h20", "v20" ] ],
+    [ "r1:2", "hb_led:A", "blue", [ "v-20" ] ],
+    [ "hb_led:C", "esp:GND.1", "black", [ "v40", "h-140" ] ]
+  ]
+}
+

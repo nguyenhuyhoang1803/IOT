@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "Lab 1 IoT - Embedded Engineer",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 60, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": 60,
+      "left": 160,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_a",
+      "top": 70,
+      "left": -130,
+      "attrs": { "color": "green", "label": "Button A: Start/Pause (GPIO 18)" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_b",
+      "top": 170,
+      "left": -130,
+      "attrs": { "color": "red", "label": "Button B: Reset (GPIO 19)" }
+    }
+  ],
+  "connections": [
+    [ "lcd:GND", "esp:GND.2", "black", [ "v20", "h-40" ] ],
+    [ "lcd:VCC", "esp:5V", "red", [ "v30", "h-50" ] ],
+    [ "lcd:SDA", "esp:21", "blue", [ "v40", "h-60" ] ],
+    [ "lcd:SCL", "esp:22", "yellow", [ "v50", "h-70" ] ],
+    [ "esp:18", "btn_a:1.l", "green", [ "h-20", "v20" ] ],
+    [ "btn_a:2.l", "esp:GND.1", "black", [ "v20", "h40" ] ],
+    [ "esp:19", "btn_b:1.l", "red", [ "h-30", "v20" ] ],
+    [ "btn_b:2.l", "esp:GND.1", "black", [ "v20", "h40" ] ]
+  ]
+}
+
